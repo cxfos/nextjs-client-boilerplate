@@ -1,10 +1,10 @@
 import {render, screen} from '@testing-library/react';
-import Document from '..';
+import Home from '.';
 
-describe('<Document />', () => {
+describe('<Home />', () => {
 
     test('Should render successufully', () => {
-        render(<Document />);
+        render(<Home />);
 
         expect(screen.getByRole('main')).toBeInTheDocument();
     });
