@@ -12,7 +12,7 @@ const config = {
   // Add more setup options before each test is run
   setupFilesAfterEnv: ['<rootDir>/.jest/setup.ts'],
   testEnvironment: 'jest-environment-jsdom',
-  collectCoverageFrom: ['src/**/*.ts(x)'],
+  collectCoverageFrom: ['<rootDir>/src/**/*.ts(x)'],
   coverageReporters : ['lcov', 'text', 'text-summary', 'cobertura'],
   coverageThreshold: {
       global: {
@@ -21,7 +21,12 @@ const config = {
           functions: 100,
           lines: 100
       }
-  }
+  },
+  moduleNameMapper: {
+    '^components/(.*)$': '<rootDir>/src/components/$1',
+    '^pages/(.*)$': '<rootDir>/src/pages/$1',
+    '^styles/(.*)$': '<rootDir>/src/styles/$1',
+  },
 };
 
 // createJestConfig is exported this way to ensure that next/jest can load the Next.js config which is async

@@ -1,22 +1,26 @@
 import * as S from './styles';
 
-const Main = () => (
+type Props = {
+  logo: {
+    src: string,
+    alt: string
+  },
+  title: string,
+  descriptions: Array<string>,
+  illustration: {
+    src: string,
+    alt: string
+  },
+};
+
+const Main = ({logo, title, descriptions, illustration}: Props) => (
   <S.Wrapper>
-    <S.Logo
-      src="/img/next.svg"
-      alt="Image containing NextJS Logo"
-    />
-    <S.Title>BoilerPlate</S.Title>
-    <S.Description>
-      ReactJS, NextJS and Styled Components
-    </S.Description>
-    <S.Description>
-      TypeScript, Jest and Testing Library
-    </S.Description>
-    <S.Illustration
-      src="/img/hero-illustration.svg"
-      alt="Ilustration of a developer sitted in front of a screen full of code"
-    />
+    <S.Logo {...logo}/>
+    <S.Title>{title}</S.Title>
+    {descriptions.map((description, index) =>     
+      <S.Description key={`description-${index}`}>{description}</S.Description>
+    )}
+    <S.Illustration {...illustration} />
   </S.Wrapper>
 );
 
