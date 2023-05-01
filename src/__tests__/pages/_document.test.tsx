@@ -2,7 +2,7 @@ import {render} from '@testing-library/react';
 import Document, {DocumentContext} from 'next/document';
 import {mocked} from 'jest-mock';
 
-import MyDocument from './_document';
+import MyDocument from 'pages/_document';
 
 jest.mock('next/document');
 const documentMocked = mocked(Document);

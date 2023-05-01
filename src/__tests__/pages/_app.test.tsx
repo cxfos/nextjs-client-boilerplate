@@ -1,6 +1,6 @@
 import {render, screen} from '@testing-library/react';
-import App from './_app';
-import { AppProps } from 'next/app';
+import {AppProps} from 'next/app';
+import App from 'pages/_app';
 
 describe('App', () => {
     const appProps: AppProps = {

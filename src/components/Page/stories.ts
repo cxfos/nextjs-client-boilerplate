@@ -4,7 +4,7 @@ import {within, userEvent} from '@storybook/testing-library';
 import {Page} from '.';
 
 const meta: Meta<typeof Page> = {
-  title: 'Pages/Page',
+  title: 'Components/Page',
   component: Page,
   parameters: {
     layout: 'fullscreen',
