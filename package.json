@@ -10,6 +10,7 @@
     "prepare": "husky install",
     "test": "jest --colors",
     "test:cover": "yarn test --coverage",
+    "test:ci": "yarn test:cover --runInBand",
     "test:watch": "yarn test --watch",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build"
